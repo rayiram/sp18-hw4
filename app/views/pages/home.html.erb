@@ -1,0 +1,40 @@
+<style>
+body {
+	background: teal;
+  	color: white;
+}
+h3 {
+	text-decoration: underline;
+}
+</style>
+
+<h1>HOME PAGE</h1>
+
+<h2> let's show all the Cats, Todos, and Users in the database </h2>
+<br>
+<h3> cats </h3>
+<% @cats.each do |c| %>
+	Name: <%= c.name %>
+	<br>
+	<br>
+<% end %>
+
+<h3> todos </h3>
+<% @todos.each do |t| %>
+	Tasks: <%= t.tasks %>
+	<br>
+	Finished: <%= t.finished %>
+	<br>
+	<br>
+<% end %>
+
+<h3> users </h3>
+<% @users.each do |u| %>
+	Username: <%= u.username %>
+	<br>
+	Email: <%= u.email %>
+	<br>
+	Age: <%= u.age %>
+	<br>
+	<br>
+<% end %>
